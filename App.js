@@ -11,13 +11,15 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Legenda from './src/componentes/Legenda'
 import Calendarario from './src/componentes/Calendario'
+import Agenda from './src/componentes/Agenda';
 
 export default class App extends Component {
   render() {
     return (
       <View>
-        <Legenda/>
-        <Calendarario/>
+        {/*<Legenda/>
+        <Calendarario/>*/}
+        <Agenda/>
       </View>
     );
   }
