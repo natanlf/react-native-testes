@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     legenda: {
         flex:1,
         flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 15
+        paddingHorizontal: 15,
+        alignItems: 'center'
     },
     feriado: {
         width: 40,
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
 })
 
 const Feriado = () => <View style={styles.feriado}></View>
+const Evento = () => <View style={styles.evento}></View>
 
 export default props => {
     return (
@@ -37,6 +38,8 @@ export default props => {
             <View style={styles.legenda}>
                 <Feriado />
                 <Text style={{paddingHorizontal:10}}>Feriado</Text>
+                <Evento/>
+                <Text style={{paddingHorizontal: 10}}>Evento</Text>
             </View>
         </View>
     )
