@@ -12,14 +12,16 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import Legenda from './src/componentes/Legenda'
 import Calendarario from './src/componentes/Calendario'
 import Agenda from './src/componentes/Agenda';
+import Downloadfile from './src/componentes/Downloadfile';
 
 export default class App extends Component {
   render() {
     return (
       <View>
         {/*<Legenda/>
-        <Calendarario/>*/}
-        <Agenda/>
+        <Calendarario/>
+        <Agenda/>*/}
+        <Downloadfile/>
       </View>
     );
   }
