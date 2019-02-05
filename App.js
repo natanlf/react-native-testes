@@ -20,8 +20,10 @@ export default class App extends Component {
       <View>
         {/*<Legenda/>
         <Calendarario/>
-        <Agenda/>*/}
-        <Downloadfile/>
+        <Agenda/>
+        <Downloadfile/>*/}
+        <Legenda/>
+        <Calendarario/>
       </View>
     );
   }

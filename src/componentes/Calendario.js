@@ -8,13 +8,22 @@ import {
   ScrollView,
 } from 'react-native';
 
-import {Calendar} from 'react-native-calendars';
+import {Calendar, LocaleConfig} from 'react-native-calendars';
 
 export default class Calendario extends PureComponent {
     constructor(props) {
       super(props);
       this.state = {};
       this.onDayPress = this.onDayPress.bind(this);
+
+      LocaleConfig.locales['br'] = {
+        monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        monthNamesShort: ['Jan.','Fev.','Mar','Abr','Mai','Jun','Jul.','Ago','Set.','Out.','Nov.','Dec.'],
+        dayNames: ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'],
+        dayNamesShort: ['Dom.','Seg.','Ter.','Qua.','Qui.','Sex.','Sab.']
+      };
+      
+      LocaleConfig.defaultLocale = 'br';
     }
 
     evento = {
@@ -22,6 +31,7 @@ export default class Calendario extends PureComponent {
       '2019-02-24': { marked: true, dotColor: 'red'},
       '2019-02-25': {marked: true, dotColor: 'green'},
       '2012-05-26': {marked: true},
+      '2019-02-23': {selected: true},
       '2012-05-27': {disabled: true, activeOpacity: 0}
     }
 
@@ -29,7 +39,6 @@ export default class Calendario extends PureComponent {
       return (
         <View>
           <ScrollView style={styles.container}>
-          <Text style={styles.text}>Calendar with marked dates and hidden arrows</Text>
             <Calendar
             onDayPress={this.onDayPress}
               style={styles.calendar}
@@ -39,6 +48,15 @@ export default class Calendario extends PureComponent {
               // disabledByDefault={true}
               hideArrows={true}
             />
+
+        <Text style={styles.text}>Calendar with week numbers</Text>
+        <Calendar
+          onDayPress={this.onDayPress}
+          style={styles.calendar}
+          hideExtraDays
+          showWeekNumbers
+          markedDates={{[this.state.selected]: {selected: true}}}
+        />
           </ScrollView>
         </View>
       )
@@ -48,6 +66,7 @@ export default class Calendario extends PureComponent {
       this.setState({
         selected: day.dateString
       });
+      alert(day.dateString)
     }
   }
   
