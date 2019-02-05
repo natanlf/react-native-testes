@@ -13,17 +13,20 @@ import Legenda from './src/componentes/Legenda'
 import Calendarario from './src/componentes/Calendario'
 import Agenda from './src/componentes/Agenda';
 import Downloadfile from './src/componentes/Downloadfile';
+import Exemplo from './src/componentes/Exemplo';
+import CardTeste from './src/componentes/CardTeste';
+
 
 export default class App extends Component {
   render() {
     return (
-      <View>
+      <View style={{flex:1}}>
         {/*<Legenda/>
         <Calendarario/>
         <Agenda/>
-        <Downloadfile/>*/}
-        <Legenda/>
-        <Calendarario/>
+        <Downloadfile/>
+        <CardTeste/>*/}
+        <Exemplo/>
       </View>
     );
   }
