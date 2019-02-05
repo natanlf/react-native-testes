@@ -15,6 +15,7 @@ import Agenda from './src/componentes/Agenda';
 import Downloadfile from './src/componentes/Downloadfile';
 import Exemplo from './src/componentes/Exemplo';
 import CardTeste from './src/componentes/CardTeste';
+import TabsExample from './src/componentes/TabsExample'
 
 
 export default class App extends Component {
@@ -26,7 +27,7 @@ export default class App extends Component {
         <Agenda/>
         <Downloadfile/>
         <CardTeste/>*/}
-        <Exemplo/>
+        <TabsExample/>
       </View>
     );
   }
