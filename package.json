@@ -10,6 +10,7 @@
     "native-base": "^2.11.0",
     "react": "16.6.3",
     "react-native": "0.58.3",
+    "react-navigation": "2.7.0",
     "react-native-calendars": "^1.22.0",
     "rn-fetch-blob": "github:joltup/rn-fetch-blob#master"
   },
